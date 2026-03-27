@@ -59,7 +59,56 @@ def read_employee():
                 Position ID: {employee.position_id} | Address: {employee.address} | Email: {employee.email} | Phone: {employee.phone_number} | 
                    Emergency Contact: {employee.emergency_contact} | Emergency Phone: {employee.emergency_phone_number}""")
         session.commit()
-        session.close()    
+        session.close() 
+
+def update_employee(id, first_name=None, last_name=None, ssid=None, position_id=None, address=None,
+                  email=None, phone_number=None, emergency_contact=None, emergency_phone_number=None):
+    with get_session() as session:
+        employee = session.query(Employee).filter(Employee.id == id).first()
+
+        if not employee:
+            print(f"Employee with ID {id} does not exist")
+            return
+
+        if not any([first_name, last_name, ssid, position_id, address, 
+            email, phone_number, emergency_contact, emergency_phone_number]):
+            print("No updates provided")
+            return
+
+        if first_name:
+            employee.first_name = first_name
+
+        if last_name:
+            employee.last_name = last_name
+
+        if ssid:
+            employee.ssid = ssid
+
+        if position_id:
+            employee.position_id = position_id
+
+        if address:
+            employee.address = address
+
+        if email:
+            employee.email = email
+
+        if phone_number:
+            employee.phone_number = phone_number
+
+        if emergency_contact:
+            employee.emergency_contact = emergency_contact
+
+        if emergency_phone_number:
+            employee.emergency_phone_number = emergency_phone_number
+
+        try:
+            session.commit()
+            session.close()
+            print(f"Employee with ID {id} has been updated!")
+        except Exception as e:
+            session.rollback()
+            print(f"Error updating employee: {e}")  
             
 def delete_employee(id):
     with get_session() as session:
