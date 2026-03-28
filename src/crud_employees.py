@@ -125,8 +125,11 @@ def delete_employee(id):
             session.rollback()
             print(f"Error deleting employee: {e}")
 
+
+# Test data for functions
+
 # add_employee('Ajay', 'Paterson', '002348529', 1, '123 ST NW', 'ajay@example.com',
 #         '780-555-5555', 'Tiff', '780-998-8765')
 
 # read_employee()
-delete_employee(4)
+# delete_employee(4)

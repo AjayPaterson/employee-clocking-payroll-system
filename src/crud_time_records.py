@@ -97,7 +97,13 @@ def delete_time_record(id):
             session.rollback()
             print(f"Error deleting record: {e}")
 
-            
+
+# Test data for functions
+
 # create_check_in(3, datetime(2024,1, 15, 7, 5,0))
 
 # create_check_out(3)
+
+# read_time_records()
+
+# delete_time_record(4)

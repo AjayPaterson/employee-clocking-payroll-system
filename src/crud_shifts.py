@@ -123,6 +123,7 @@ def delete_shift(id):
 
 
 
+# Test data for functions
 
 # read_shifts()
 # get_shift_by_employee_id(2)
