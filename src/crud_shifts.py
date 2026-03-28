@@ -116,7 +116,7 @@ def delete_shift(id):
             session.close()
         except Exception as e:
             session.rollback()
-            print(f"Error deleting shift with id {e}")
+            print(f"Error deleting shift: {e}")
 
 
 
