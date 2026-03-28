@@ -89,3 +89,14 @@ def delete_position(id):
             session.rollback()
             print(f"Error deleting position: {e}")
         
+
+
+# Test data for functions
+
+# read_positions()
+
+# add_position("Assistant Manager", 18.00)
+
+# update_position(4, None, 18.25)
+
+# delete_position(4)
