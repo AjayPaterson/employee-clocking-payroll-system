@@ -134,6 +134,6 @@ def delete_shift(id):
 # get_shift_by_employee_id(2)
 # get_shift_by_id(4)
 
-# update_shift(4, datetime(2026, 5, 5, 8, 0, 0), 3)
+update_shift(3, datetime(2026, 5, 5, 8, 0, 0), 3)
 
 # delete_shift(4)

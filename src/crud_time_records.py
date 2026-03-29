@@ -106,4 +106,8 @@ def delete_time_record(id):
 
 # read_time_records()
 
-# delete_time_record(4)
+# delete_time_record(6)
+
+# create_check_in(3, datetime(2026,5,5,8,2,0))
+
+# create_check_out(3,datetime(2026,5,5,12,10,0))
