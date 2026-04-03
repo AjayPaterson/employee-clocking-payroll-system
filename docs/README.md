@@ -1,7 +1,18 @@
-# Python II Assignment 6 - SQLAlchemy ORM, Working with Records
+# Employee Time Tracking & Payroll System
 
-## Instructions
+## Overview
 
-This assignment is meant to demonstrate ability on how to use CRUD functions in Python to interact with our database. The scenario posed was to create a program for a company that keeps track of employee information, compnay positions, shifts assigned to employees, clock in/ out records for employees, and payroll records.
+A command-line application for managing employee data, scheduling, and payroll for a small company. The system handles employee records, company positions, shift assignments, and clock in/out functionality with payroll processing.
 
-The program allows the employer to add, read, edit and delete employee data, company's position information, and assign and edit shifts. The clock in functionality only allows employees to check-in 15 minutes before their assigned shift start time, or 15 minutes after their assigned shift time. Once a payroll date window has been applied, the program will calculate the total hours worked by a specific employee and adds up their total pay based off their compensation.
+## Features
+
+- Add, read, update, and delete employee records, positions, and shifts
+- Clock in/out validation that restricts check-in to a 15-minute window around shift start time
+- Payroll processing based on configurable date windows
+
+## Tech Stack
+
+- Python
+- SQLAlchemy ORM
+- MariaDB
+- Alembic (database migrations)
